@@ -1,5 +1,50 @@
-.App {
-  text-align: center;
+.Simpsons span{
+    display: block;
+    font-size: 80px;
+    text-align: center;
+    margin: 30px;
+    color: #346399;
 }
-
-
+.SimpsonsBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.block{
+    padding: 10px;
+    text-align: center;
+    width: 18%;
+    border: 1px solid yellow;
+}
+.block img{
+    width: 50px;
+    height: 500px;
+}
+.block p{
+    margin-left: 10px;
+}.SimpsonsBlock {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+ }
+.block{
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 18%;
+    border: 3px solid yellow;
+}
+.block img{
+    width: 100px;
+    height: 200px;
+}
+.block p{
+    text-align: left;
+}
+.CharImg{
+    display: inline-block;
+}
+.body{
+    margin: 20px;
+    text-align: left;
+}
