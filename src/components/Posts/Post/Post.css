@@ -1,0 +1,27 @@
+.PostBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 16%;
+    border: 2px solid darkcyan;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.title {
+    margin: 10px;
+}
+
+.PostBlock p {
+    text-align: left;
+}
+
+.PostBlock button:hover {
+    cursor: pointer;
+}
+
+.PostBlock:hover {
+    background-color: rgba(216, 216, 216, 0.33);
+}
