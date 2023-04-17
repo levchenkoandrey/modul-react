@@ -1,5 +1,31 @@
 .App {
   text-align: center;
 }
+.CarsBlock{
+  border: 5px solid darkblue;
+}
+.Cars{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 
-
+}
+.Car{
+  width: 28%;
+  margin: 10px;
+  border: 3px solid #346399;
+  border-radius: 10px;
+}
+.Form{
+  margin: 30px;
+  padding: 20px;
+  border-bottom: 1px solid #346399;
+}
+.Input{
+  margin-right: 20px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.Button{
+  margin: 10px;
+}
