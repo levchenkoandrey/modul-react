@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Car = ({car,setCarForUpdate,setDeleteCar}) => {
+const Car = ({car, setCarForUpdate, setDeleteCar}) => {
     const {id, brand, price, year} = car;
     return (
         <div className={"Car"}>

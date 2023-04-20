@@ -29,3 +29,20 @@
 .Button{
   margin: 10px;
 }
+.UserForm{
+  border: 3px solid blue;
+  margin: 20px;
+  padding: 20px;
+}
+.UserBlock{
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid dodgerblue;
+  border-radius: 15px;
+}
+.NewUser{
+  border: 3px solid #13aa31;
+}
+.CommentForm{
+  margin: 10px;
+}

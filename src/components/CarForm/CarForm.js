@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
 import {useForm} from "react-hook-form";
+
 import {CarServices} from "../../services/Car.services";
 
-const CarForm = ({setshowAllCars, carForUpdate,deleteCar}) => {
+const CarForm = ({setshowAllCars, carForUpdate, deleteCar}) => {
     const {register, handleSubmit, reset, formState: {errors, isValid}, setValue} = useForm({mode: 'all'});
     useEffect(() => {
         if (carForUpdate) {
@@ -28,14 +29,14 @@ const CarForm = ({setshowAllCars, carForUpdate,deleteCar}) => {
         setshowAllCars(listCar => !listCar);
         reset();
     }
-    const deleteСhosenCar = async (car)=>{
+    const deleteСhosenCar = async (car) => {
         const {data} = await CarServices.deleteById(deleteCar.id);
         setshowAllCars(listCar => !listCar);
         reset();
     }
 
     return (
-        <form onSubmit={handleSubmit(carForUpdate ? updateCar : deleteCar? deleteСhosenCar: saveCar)}>
+        <form onSubmit={handleSubmit(carForUpdate ? updateCar : deleteCar ? deleteСhosenCar : saveCar)}>
             <input className={"Input"} type="text" placeholder={"brand"}{...register('brand', {
                 pattern: {
                     value: /^[a-zA-Zа-яА-яёЁіІїЇ]{1,20}$/,
@@ -61,7 +62,7 @@ const CarForm = ({setshowAllCars, carForUpdate,deleteCar}) => {
             })}/>
             {errors.year && <div>{errors.year.message}</div>}
 
-            <button disabled={!isValid}>{carForUpdate ? 'Update' :deleteCar? 'delete':'Save'}</button>
+            <button disabled={!isValid}>{carForUpdate ? 'Update' : deleteCar ? 'delete' : 'Save'}</button>
         </form>
     );
 };
