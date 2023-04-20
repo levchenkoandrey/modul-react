@@ -1,5 +1,21 @@
 .App {
   text-align: center;
 }
-
+.Menu{
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.Menu li{
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgba(190, 190, 196, 0.32);
+  font-size: 30px;
+}
+.Menu li Link{
+  text-decoration: none;
+}
 
