@@ -1,0 +1,32 @@
+.Block {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.PostBlock {
+    color: aliceblue;
+    width: 76%;
+    position: fixed;
+    background-color: rgba(0, 139, 139, 0.95);
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.PostBlock button {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border-radius: 50%;
+    padding: 0 10px;
+    border: 0px;
+}
+
+.PostBlock button:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}

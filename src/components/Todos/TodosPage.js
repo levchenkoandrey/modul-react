@@ -1,13 +1,15 @@
 import React, {useEffect, useState} from 'react';
+
 import {TodosServises} from "../../services/getServises";
 import Todo from "./Todo/Todo";
+import './Todos.css'
 
 const TodosPage = () => {
     const [todo, setTodo] = useState([]);
 
-    useEffect(()=> {
+    useEffect(() => {
         TodosServises.getData().then(value => value.data).then(data => setTodo(data))
-    },[]);
+    }, []);
 
     return (
         <div>Todos Page

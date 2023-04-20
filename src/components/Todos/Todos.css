@@ -1,0 +1,32 @@
+.FatherBlock {
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.ChildBlock {
+    background-color: aliceblue;
+    width: 12%;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+.comment {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Button {
+    margin: 10px auto;
+}
+
+.CommentsBlock {
+    margin-top: 70px;
+}
