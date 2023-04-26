@@ -1,5 +1,53 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
+.Menu {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
 
+.Menu li {
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    background-color: white;
+    font-size: 30px;
+}
+
+.Menu li:hover {
+    background-color: rgba(190, 190, 196, 0.2);
+}
+
+a {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+.PostBlock {
+    color: aliceblue;
+    width: 76%;
+    background-color: rgba(0, 139, 139, 0.95);
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.Title {
+    font-size: 40px;
+}
+
+.FormItem {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.FormItem input, button {
+    margin: 10px;
+}
