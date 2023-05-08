@@ -10,7 +10,7 @@ const reducer = (state, action) => {
         case "ADD_DOG":
             return {...state, dogs: [...state.dogs, action.payload]};
         default:
-            return {...state};
+            return state;
     }
 }
 const AnimalsForm = () => {
