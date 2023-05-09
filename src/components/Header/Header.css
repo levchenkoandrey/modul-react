@@ -1,0 +1,13 @@
+.Header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    font-size: 45px;
+    background-color: forestgreen;
+}
+
+.Header button {
+    font-size: 30px;
+    border-radius: 10px;
+}
