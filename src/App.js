@@ -27,6 +27,7 @@ function App() {
                 </ul>
             </div>
             <div>
+                {/*will do main link*/}
                 <Routes>
                     <Route path={'/'} element={<HomePage/>}/>
                     <Route path={'/Todos'} element={<TodosPage/>}/>
