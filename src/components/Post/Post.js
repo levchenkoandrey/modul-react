@@ -1,16 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 
-import {PostsServices} from "../../services/getServises";
 import './Post.css'
+import {postService} from "../../services/post.service";
 
 const Post = () => {
 
     const {postId} = useParams();
-    console.log(postId);
+
     const [post, setPost] = useState(null);
+
     useEffect(() => {
-        PostsServices.getPost(postId).then(value => value.data).then(data => setPost(data))
+        postService.getById(postId).then(value => value.data).then(value => setPost(value))
     }, [postId])
     return (
         <div className={"Block"}>

@@ -1,42 +1,26 @@
-import './App.css';
-import {Link, Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 
-import HomePage from "./components/Home/HomePage";
-import TodosPage from "./components/Todos/TodosPage";
-import AlbumsPage from "./components/Albums/AlbumsPage";
-import CommentsPage from "./components/Comments/CommentsPage";
-import Post from "./components/Comments/Post";
+import './App.css';
+import MainLayout from "./components/layouts/MainLayout";
+import TodosPage from "./pages/TodoPage/TodosPage";
+import AlbumsPage from "./pages/AlbumsPage/AlbumsPage";
+import CommentsPage from "./pages/CommentsPage/CommentsPage";
+import Post from "./components/Post/Post";
+
 
 function App() {
     return (
         <div className="App">APP
-            <div>
-                <ul className={"Menu"}>
-                    <li>
-                        <Link to={'/'}>Home</Link>
-                    </li>
-                    <li>
-                        <Link to={'/Todos'}>Todos</Link>
-                    </li>
-                    <li>
-                        <Link to={'/Albums'}>Albums</Link>
-                    </li>
-                    <li>
-                        <Link to={'/Comments'}>Comments</Link>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                {/*will do main link*/}
-                <Routes>
-                    <Route path={'/'} element={<HomePage/>}/>
-                    <Route path={'/Todos'} element={<TodosPage/>}/>
-                    <Route path={'/Albums'} element={<AlbumsPage/>}/>
-                    <Route path={'/Comments'} element={<CommentsPage/>}>
+            <Routes>
+                <Route path={'/'} element={<MainLayout/>}>
+                    <Route index element={<Navigate to={'todos'}/>}/>
+                    <Route path={'todos'} element={<TodosPage/>}/>
+                    <Route path={'albums'} element={<AlbumsPage/>}/>
+                    <Route path={'comments'} element={<CommentsPage/>}>
                         <Route path={':postId'} element={<Post/>}/>
                     </Route>
-                </Routes>
-            </div>
+                </Route>
+            </Routes>
         </div>
     );
 }

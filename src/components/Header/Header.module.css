@@ -1,0 +1,20 @@
+.Header{
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    height: 80px;
+    background-color: forestgreen;
+}
+.Header button{
+    height: 50px;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 10px;
+    color: ghostwhite;
+    background-color: darkcyan;
+}
+.Header button:hover{
+    cursor: pointer;
+    background-color: #024b4b;
+}

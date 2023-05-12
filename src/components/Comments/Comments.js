@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import {Outlet} from "react-router-dom";
 
-import {CommentsServices} from "../../services/getServises";
 import Comment from "./Comment/Comment";
 import "../Todos/Todos.css"
+import {commentService} from "../../services/comment.service";
 
-const CommentsPage = () => {
+const Comments = () => {
     const [comments, setComments] = useState([]);
 
     useEffect(() => {
-        CommentsServices.getData().then(value => value.data).then(data => setComments(data))
+        commentService.getAll().then(value => value.data).then(value => setComments([...value]))
     }, []);
 
     return (
@@ -22,4 +22,4 @@ const CommentsPage = () => {
     );
 };
 
-export default CommentsPage;
+export default Comments;
