@@ -1,7 +1,7 @@
 import React, {useReducer, useState} from 'react';
 
-import Cat from "./Cat/Cat";
-import Dog from "./Dog/Dog";
+import Cats from "./Cats/Cats";
+import Dogs from "./Dogs/Dogs";
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -46,8 +46,8 @@ const AnimalsForm = () => {
                 <input type="text" value={newDogName} onChange={(e) => setNewDogName(e.target.value)}/>
                 <button onClick={addDog}>Add Dog</button>
             </div>
-            {state.cats.map((cat, index) => <Cat key={index} cat={cat} index={index} deleteCat={deleteCat}/>)}
-            {state.dogs.map((dog, index) => <Dog key={index} dog={dog} index={index} deleteDog={deleteDog}/>)}
+            {state.cats.map((cat, index) => <Cats key={index} cat={cat} index={index} deleteCat={deleteCat}/>)}
+            {state.dogs.map((dog, index) => <Dogs key={index} dog={dog} index={index} deleteDog={deleteDog}/>)}
         </div>
     );
 };

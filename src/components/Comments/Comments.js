@@ -1,9 +1,9 @@
 import {Component} from "react";
-import {commentService} from "../../services/comments.service";
+import {commentService} from "../../services/comment.service";
 import {Comment} from "./Comment/Comment";
 
 
-class CommentsPage extends Component {
+class Comments extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,11 +18,10 @@ class CommentsPage extends Component {
     render() {
         return (
             <div>
-                <div className={"Title"}>Comments</div>
-                <div>{this.state.comments.map(comment => <Comment key={comment.id} comment={comment}/>)}</div>
+                {this.state.comments.map(comment => <Comment key={comment.id} comment={comment}/>)}
             </div>
         )
     }
 }
 
-export {CommentsPage}
+export {Comments}
