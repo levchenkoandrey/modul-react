@@ -1,9 +1,11 @@
 import React from 'react';
+import {UserForm, Users} from "../components";
 
 const UserPage = () => {
     return (
         <div>
-            UserPage
+            <UserForm/>
+            <Users/>
         </div>
     );
 };

@@ -1,5 +1,4 @@
 import {placeHolderAPIService} from "./axios.service";
-import * as url from "url";
 import {urls} from "../constants";
 
 const userService = {

@@ -1,9 +1,11 @@
 import React from 'react';
+import {CommentForm, Comments} from "../components";
 
 const CommentPage = () => {
     return (
         <div>
-            CommentPage
+            <CommentForm/>
+            <Comments/>
         </div>
     );
 };
