@@ -4,8 +4,6 @@ import {SubmitHandler, useForm} from "react-hook-form";
 import {ICar} from "../interfaces";
 import {useAppDispatch, useAppSelector} from "../hooks";
 import {carAction} from "../redux";
-import {Simulate} from "react-dom/test-utils";
-import loadedMetadata = Simulate.loadedMetadata;
 
 const CarForm: FC = () => {
     const {register, handleSubmit, reset, setValue} = useForm<ICar>();

@@ -1,12 +1,14 @@
 import {createAsyncThunk, createSlice, isFulfilled, isRejectedWithValue} from "@reduxjs/toolkit";
 
-import {ICar, IError} from "../../interfaces";
+import {ICar, IError, IPagination} from "../../interfaces";
 import {carService} from "../../services";
 import {AxiosError} from "axios";
 
 
 export interface IState {
     cars: ICar[],
+    prev:string,
+    next: string,
     errors: IError,
     trigger: Boolean,
     carForUpdate: ICar
@@ -14,11 +16,13 @@ export interface IState {
 
 const initialState: IState = {
     cars: [],
+    prev: null,
+    next:null,
     errors: null,
     carForUpdate: null,
     trigger: false
 };
-const getAll = createAsyncThunk<ICar[], void>(
+const getAll = createAsyncThunk<IPagination<ICar[]>, void>(
     'carSlice/getAll',
     async (_, {rejectWithValue}) => {
         try {
@@ -79,7 +83,10 @@ const slice = createSlice({
     extraReducers: builder =>
         builder
             .addCase(getAll.fulfilled, (state, action) => {
-                state.cars = action.payload
+                const {prev,next,items} = action.payload;
+                state.cars = items
+                state.prev = prev
+                state.next = next
             })
             .addCase(updateCar.fulfilled, state => {
                 state.carForUpdate = null
